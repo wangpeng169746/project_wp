@@ -1,0 +1,13 @@
+将一个程序在任意位置都能直接执行的方法
+
+1.程序 hello.py  第一行增加 #!/usr/bin/python3
+
+2.在命令行修改这个程序的执行权限  cd month/day02
+                              chmod a+x  hello.py
+
+3.echo $PATH 查看所有环境变量目录，选择一个将程序移动进去
+    sudo cp hello.py /usr/bin
+    将自己的某个目录变为环境变量目录
+
+在/etc/profile文件最后写入一行
+export PATH="$PATH:/home/tarena/month02/day01"

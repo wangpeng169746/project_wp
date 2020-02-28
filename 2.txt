@@ -1,0 +1,25 @@
+实验1
+    1.创建新用户 sudo adduser --home/用户名  用户名
+    2.配置该用户的管理员权限
+        sudo vi /etc/sudoers
+
+        在其中  root ALL=(ALL:ALL) ALL 下增加一行  用户名 ALL=(ALL:ALL) ALL
+        强制保存，退出
+    3.切换用户查看，新用户已经诞生
+
+实验2 删除一个用户
+
+    1.sudo deluser --remove-home wp01
+    2.sudo delgroup wp01
+    3.sudo vipw 进入到用户配置文件，找到wp01那一行，删除
+        ctrl+o  保存
+        ctrl+x  退出
+
+实验3 建立ssh秘钥信任
+    1. 个人电脑 ssh-keygen 生成秘钥对儿
+    2. 在～/.ssh中将公钥给服务器（id_rsa.pub)
+    3.在服务器中将公钥内容 写入到一个authorized_keys文件中
+
+
+***!!!!:所有字符串都能转化成字节串，但是不是所有的字节串都能转化成字符串
+***!!!!:函数的三大要素：功能，参数，返回值

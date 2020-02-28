@@ -1,6 +1,5 @@
 """
-chat room 客户端
-发送请求，得到结果
+方案一
 """
 
 from socket import  *
